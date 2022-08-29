@@ -46,8 +46,11 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'rest_framework',
+
+    'apps.accounts',
     'apps.product',
     'apps.category',
+
 ]
 
 MIDDLEWARE = [
@@ -91,6 +94,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+AUTH_USER_MODEL = 'accounts.Account'
+
 
 
 # Password validation
@@ -160,7 +167,7 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FormParser',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
