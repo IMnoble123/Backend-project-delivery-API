@@ -14,5 +14,5 @@ class CategoryViewSet(ModelViewSet):
 class SubCategoryViewSet(ModelViewSet):
 
     permission_classes = [AllowAny]
-    queryset         = SubCategory.objects.all().order_by('id')
-    serializer_class = SubCategorySerializer
+    queryset           = SubCategory.objects.all().order_by('id')
+    serializer_class   = SubCategorySerializer

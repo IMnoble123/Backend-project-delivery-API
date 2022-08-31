@@ -20,7 +20,6 @@ class IsCreationOrIsAuthenticated(BasePermission):
             return True
 
 
-
 class UserViewSet(viewsets.ModelViewSet):
     
     queryset           = Account.objects.all().order_by('id')
